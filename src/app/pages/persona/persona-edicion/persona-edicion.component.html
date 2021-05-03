@@ -1,0 +1,117 @@
+<form class="example-container" [formGroup]="form" (ngSubmit)="operar()" #espForm="ngForm">
+
+    <div [hidden]="true">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="ID" required formControlName="id">
+        </mat-form-field>
+    </div>
+
+
+    
+
+    <mat-form-field>
+        <input matInput placeholder="Nombres" required formControlName="nombres">
+
+       
+    </mat-form-field>
+
+
+    <mat-form-field>
+        <input matInput placeholder="Apellidos" required formControlName="apellidos">
+    </mat-form-field>
+
+    
+
+    <mat-form-field>
+        <input matInput placeholder="Dni" required formControlName="dni">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Direccion" required formControlName="direccion">
+    </mat-form-field>
+
+
+
+    
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Telefono" required formControlName="telefono">
+    </mat-form-field>
+
+
+    
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Celular" required formControlName="celular">
+    </mat-form-field>
+
+
+    <h2 id="contacto">PERSONA CONTACTO</h2> 
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="nombrescontacto" required formControlName="nombrescontacto">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="apellidoscontacto" required formControlName="apellidoscontacto">
+    </mat-form-field>
+    
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="telefonocontacto" required formControlName="telefonocontacto">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="celularcontacto" required formControlName="celularcontacto">
+    </mat-form-field>
+
+
+    <h2 id="experiencias">EXPERIENCIA LABORAL</h2> 
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="descripcionempresa" required formControlName="descripcionempresa">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha Inicio Labores">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Fecha Fin Labores">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <h2 id="estudios">ESTUDIOS O CERTIFICACIONES</h2> 
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="nombrecertificacion" required formControlName="nombrecertificacion">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="descripcioncertificacion" required formControlName="descripcioncertificacion">
+    </mat-form-field>
+
+
+
+    <h2 id="estudios">CONOCIMIENTOS O HABILIDADES</h2> 
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="nombrehabilidad" required formControlName="nombrehabilidad">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="descripcionhabilidad" required formControlName="descripcionhabilidad">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="espForm.invalid">
+        <mat-icon>done</mat-icon>
+        <span>Aceptar</span>
+    </button>
+    <button mat-raised-button color="accent" routerLink='/persona' type="button">
+        <mat-icon>close</mat-icon>
+        <span>Cancelar</span>
+    </button>
+</form>
+
+<br />

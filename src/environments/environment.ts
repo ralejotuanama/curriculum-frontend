@@ -4,7 +4,12 @@
 
 export const environment = {
   production: false,
-  HOST: 'http://localhost:8080'
+  HOST: 'http://localhost:8080',
+  ALLOWD_HOST: 'localhost:8080',
+  TOKEN_AUTH_USERNAME: 'curriculumapp',
+  TOKEN_AUTH_PASSWORD: 'curriculum123',
+  TOKEN_NAME: 'access_token',
+  REINTENTOS: 2
 };
 
 /*
